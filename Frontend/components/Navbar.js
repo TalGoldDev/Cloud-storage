@@ -25,7 +25,7 @@ export const Navbar = () => {
 
         <a
           className="text-customBlue-light bg-white pl-5 pr-5 pt-2 pb-2
-             rounded-3xl transition duration-300 ease-in-out bg-white hover:bg-customBlue-lighter hover:text-white"
+             rounded-3xl transition duration-300 ease-in-out bg-white hover:bg-customBlue-lighter hover:text-white text-center"
         >
           Sign Up
         </a>
