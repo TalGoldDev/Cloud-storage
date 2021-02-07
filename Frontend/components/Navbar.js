@@ -21,13 +21,17 @@ export const Navbar = () => {
         <a>FAQ</a>
       </div>
       <div id="login" className="flex font-bold text-lg items-center">
-        <a className="mr-4">Login</a>
+        <a href="#" className="mr-4">
+          Login
+        </a>
 
-        <a
-          className="text-customBlue-light bg-white pl-5 pr-5 pt-2 pb-2
-             rounded-3xl transition duration-300 ease-in-out bg-white hover:bg-customBlue-lighter hover:text-white text-center"
-        >
-          Sign Up
+        <a href="/#">
+          <button
+            className="text-white md:text-customBlue-light font-bold bg-customBlue-lighter md:bg-white pl-5 pr-5 pt-2 pb-2
+             rounded-3xl transition duration-300 ease-in-out bg-white hover:bg-customBlue-lighter hover:text-white text-center focus:outline-none"
+          >
+            Sign Up
+          </button>
         </a>
       </div>
     </div>

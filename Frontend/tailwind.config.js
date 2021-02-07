@@ -14,6 +14,7 @@ module.exports = {
       red: colors.rose,
       yellow: colors.amber,
       blue: colors.blue,
+      green: colors.green,
       customBlue: {
         light: "#0582b7",
         lighter: "#00c9d0",

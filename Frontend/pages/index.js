@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { Faq } from "../components/Faq";
 import { Features } from "../components/Features";
 import { Herobox } from "../components/Herobox";
+import { Prices } from "../components/Prices";
 
 export default function Home() {
   return (
@@ -13,8 +15,9 @@ export default function Home() {
       <main>
         <Herobox></Herobox>
         <Features></Features>
-        <div id="prices"></div>
-        <div id="faq"></div>
+        <Prices></Prices>
+        {/* <Faq></Faq>
+        <div id="faq"></div> */}
       </main>
 
       <footer className="mt-32">footer</footer>

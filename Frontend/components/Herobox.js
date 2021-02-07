@@ -2,7 +2,7 @@ import React from "react";
 
 export const Herobox = () => {
   return (
-    <div id="herobox">
+    <div id="herobox" className="xl:m-full">
       <h1 className="text-4xl md:text-7xl font-bold text-center md:text-left">
         <span className="text-customBlue-lighter">Cloud</span>Storage
       </h1>
@@ -17,11 +17,15 @@ export const Herobox = () => {
         id="call-to-action"
         className="mt-8 md:space-x-4 text-center flex flex-col md:flex-row space-y-4 md:space-y-0"
       >
-        <a className="text-lg font-bold bg-customBlue-lighter pt-3 pb-3 pr-6 pl-6 rounded-3xl">
-          Register Now
+        <a>
+          <button className="focus:outline-none text-lg font-bold bg-customBlue-lighter pt-3 pb-3 pr-6 pl-6 rounded-3xl hover:bg-customBlue-light transition duration-300 ease-in-out">
+            Register Now
+          </button>
         </a>
-        <a className="text-lg text-customBlue-lighter font-bold bg-white pt-3 pb-3 pr-6 pl-6 rounded-3xl">
-          Find Out More
+        <a>
+          <button className="focus:outline-none text-lg text-white font-bold border-2 pt-3 pb-3 pr-6 pl-6 rounded-3xl hover:text-gray-300 hover:border-gray-300 hover:bg-gray-100 hover:bg-opacity-10 transition duration-300 ease-in-out">
+            Find Out More
+          </button>
         </a>
       </div>
     </div>
