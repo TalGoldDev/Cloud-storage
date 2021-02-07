@@ -4,7 +4,7 @@ export const Features = () => {
   return (
     <div
       id="features"
-      className="mt-16 text-white md:text-black 2xl:text-white md:mt-96 xl:mt-36 flex"
+      className="flex mt-16 text-white md:text-black 2xl:text-white md:mt-96 xl:mt-36"
     >
       <div className="m-auto flex flex-col rounded-2xl md:bg-white bg-opacity-60 2xl:bg-opacity-0 items-center p-3 2xl:border-2 xl:pb-8 xl:shadow-2xl">
         <svg

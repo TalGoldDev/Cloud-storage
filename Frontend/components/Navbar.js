@@ -10,15 +10,15 @@ export const Navbar = () => {
         id="pages"
         className="hidden lg:flex flex-row space-x-6 font-semibold text-lg text-blue-100"
       >
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
 
-        <a href="#">Pricing</a>
+        <a href="#prices">Pricing</a>
 
-        <a href="#">Features</a>
+        <a href="#features">Features</a>
 
         <a href="#">Contact-Us</a>
 
-        <a href="#">FAQ</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div id="login" className="flex font-bold text-lg items-center">
         <a href="#" className="mr-4">

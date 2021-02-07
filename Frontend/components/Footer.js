@@ -5,9 +5,11 @@ export const Footer = () => {
     <div className="md:mt-60 md:pb-32">
       <footer className="">
         <div className="md:border-b-2 pb-4 flex flex-col lg:flex-row justify-between items-center">
-          <div>
-            <h2 className="text-5xl text-white">Check our service for free!</h2>
-            <p className="text-lg mt-4 text-blue-300">
+          <div className="text-center">
+            <h2 className="text-2xl md:text-5xl text-white">
+              Check our service for free!
+            </h2>
+            <p className="text-lg mt-2 md:mt-4 text-blue-100 md:text-blue-300">
               You can try out our service for up to 1GB of space for free
             </p>
           </div>
@@ -21,14 +23,14 @@ export const Footer = () => {
         </div>
         <div className="hidden md:flex justify-between mt-8 flex-col lg:flex-row items-center lg:items-start">
           <div className="text-3xl font-bold">CloudStorage</div>
-          <div className="flex flex-wrap space-x-12 w-auto text-xl text-blue-200 pt-6 lg:pt-0">
-            <a className="pl-6" href="#">
+          <div className="flex flex-wrap md:space-x-6 lg:space-x-12 w-auto text-xl text-blue-200 pt-6 lg:pt-0">
+            <a className="pl-6" href="#home">
               Home
             </a>
-            <a href="#">Pricing</a>
-            <a href="#">Features</a>
+            <a href="#prices">Pricing</a>
+            <a href="#features">Features</a>
             <a href="#">ContactUs</a>
-            <a href="#">FAQ</a>
+            <a href="#faq">FAQ</a>
           </div>
           <div className="flex flex-col space-y-2 pt-6 lg:pt-0">
             <div className="flex items-center">

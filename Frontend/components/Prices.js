@@ -4,7 +4,7 @@ import { PriceTable } from "./PriceTable";
 export const Prices = () => {
   return (
     <div className="">
-      <div id="prices" className="mt-16 text-white md:text-black md:mt-32 flex">
+      <div id="prices" className="mt-0 text-white md:text-black md:mt-32 flex">
         <div className="m-auto flex flex-col rounded-2xl md:bg-white bg-opacity-60 items-center p-5 2xl:border-2 md:shadow-2xl">
           <svg
             className="hidden md:block w-12 h-12 bg-green-100 rounded-full transform rotate-90 text-customBlue-lighter"
