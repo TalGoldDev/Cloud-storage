@@ -10,22 +10,22 @@ export const Navbar = () => {
         id="pages"
         className="hidden lg:flex flex-row space-x-6 font-semibold text-lg text-blue-100"
       >
-        <a>Home</a>
+        <a href="#">Home</a>
 
-        <a>Pricing</a>
+        <a href="#">Pricing</a>
 
-        <a>Features</a>
+        <a href="#">Features</a>
 
-        <a>Contact-Us</a>
+        <a href="#">Contact-Us</a>
 
-        <a>FAQ</a>
+        <a href="#">FAQ</a>
       </div>
       <div id="login" className="flex font-bold text-lg items-center">
         <a href="#" className="mr-4">
           Login
         </a>
 
-        <a href="/#">
+        <a href="#">
           <button
             className="text-white md:text-customBlue-light font-bold bg-customBlue-lighter md:bg-white pl-5 pr-5 pt-2 pb-2
              rounded-3xl transition duration-300 ease-in-out bg-white hover:bg-customBlue-lighter hover:text-white text-center focus:outline-none"

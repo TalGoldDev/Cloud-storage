@@ -18,8 +18,6 @@ export default function Home() {
         <Prices></Prices>
         <Faq></Faq>
       </main>
-
-      <footer className="">footer</footer>
     </div>
   );
 }
