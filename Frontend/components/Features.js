@@ -4,9 +4,9 @@ export const Features = () => {
   return (
     <div
       id="features"
-      className="mt-16 text-white md:text-black md:mt-96 xl:mt-36 flex"
+      className="mt-16 text-white md:text-black 2xl:text-white md:mt-96 xl:mt-36 flex"
     >
-      <div className="m-auto flex flex-col rounded-2xl md:bg-white bg-opacity-60 items-center p-3 2xl:border-2 2xl:bg-opacity-90 xl:pb-8 xl:shadow-2xl">
+      <div className="m-auto flex flex-col rounded-2xl md:bg-white bg-opacity-60 2xl:bg-opacity-0 items-center p-3 2xl:border-2 xl:pb-8 xl:shadow-2xl">
         <svg
           className="hidden md:block h-12 w-12 rounded-full bg-green-100 text-customBlue-lighter mt-3"
           xmlns="http://www.w3.org/2000/svg"

@@ -10,6 +10,16 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </div>
       </div>
+      <div
+        id="footer"
+        className="bg-blue-500 md:bg-white md:bg-left-top md:bg-footer-bg md:bg-cover md:bg-no-repeat"
+      >
+        <div className="items-center relative h-auto min-w-full max-w-screen-xl m-auto">
+          <div className="pt-5 pl-8 pr-8 md:pl-32 md:pr-32 text-white h-96">
+            hello
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

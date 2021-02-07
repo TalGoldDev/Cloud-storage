@@ -6,7 +6,7 @@ import { Prices } from "../components/Prices";
 
 export default function Home() {
   return (
-    <div className="pt-12 md:pt-32">
+    <div className="pt-12 lg:pt-32">
       <Head>
         <title>Cloud Storage</title>
         <link rel="icon" href="/favicon.ico" />
@@ -16,11 +16,10 @@ export default function Home() {
         <Herobox></Herobox>
         <Features></Features>
         <Prices></Prices>
-        {/* <Faq></Faq>
-        <div id="faq"></div> */}
+        <Faq></Faq>
       </main>
 
-      <footer className="mt-32">footer</footer>
+      <footer className="">footer</footer>
     </div>
   );
 }
