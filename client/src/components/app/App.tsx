@@ -4,9 +4,9 @@ import { Header } from "../header/Header";
 import { Route, Switch } from "react-router-dom";
 import Signup from "../../pages/signup/Signup.page";
 import Login from "../../pages/login/Login.page";
-import Cpanel from "../../pages/cpanel/Cpanel.page";
 import { Container } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
+import Dashboard from "../../pages/dashboard/Dashboard";
 
 export const App: React.FC = () => {
   return (
@@ -34,7 +34,7 @@ export const App: React.FC = () => {
               <Login />
             </Route>
             <Route path="/">
-              <Cpanel />
+              <Dashboard />
             </Route>
           </Switch>
         </Container>

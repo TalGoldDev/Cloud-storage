@@ -14,7 +14,7 @@ const Login: React.FC = () => {
         rounded="2xl"
         marginTop="2rem"
         bg="white"
-        height="725px"
+        height="auto"
         width={["95%", "95%", "75vh", "90vh"]}
         boxShadow="2xl"
         direction={["column", "column", "row", "row"]}
