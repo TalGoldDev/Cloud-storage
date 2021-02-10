@@ -16,6 +16,8 @@ import React from "react";
 import PasswordFieldInput from "../../common/components/PasswordFieldInput";
 import SubmitButton from "../../common/components/SubmitButton/SubmitButton";
 import TextFieldInput from "../../common/components/TextFieldInput";
+import RegistrationForm from "./components/RegistrationForm";
+import SocialSignup from "./components/SocialSignup";
 import TermsCheckbox from "./components/TermsCheckbox";
 
 const Signup: React.FC = () => {
@@ -34,104 +36,56 @@ const Signup: React.FC = () => {
         rounded="2xl"
         marginTop="2rem"
         bg="white"
-        height="60vh"
-        width="90vh"
+        height="auto"
+        width={["95%", "95%", "75vh", "90vh"]}
         boxShadow="2xl"
+        direction={["column", "column", "row", "row"]}
       >
         <Flex
           padding="3rem"
           className="registration-form"
           flexDirection="column"
-          width="50%"
+          width={["100%", "100%", "50%", "50%"]}
         >
           <div>
             <Heading size="3xl">Sign up</Heading>
           </div>
-          <div>
-            <Box marginTop="3vh">
-              <Flex>
-                <Text
-                  textColor="red.400"
-                  fontWeight="extrabold"
-                  lineHeight="1vh"
-                  marginRight="1vh"
-                >
-                  _______
-                </Text>
-                <Text textColor="red.400" fontWeight="bold">
-                  Sign up with
-                </Text>
-              </Flex>
-              <Flex marginTop="3vh" marginBottom="3vh">
-                <Button
-                  marginRight="1vh"
-                  padding="1.5rem"
-                  fontWeight="normal"
-                  fontSize="medium"
-                  bgColor="white"
-                  border="2px"
-                  borderColor="#f5f5f5"
-                  _hover={{ bg: "white", borderColor: "blue.200" }}
-                >
-                  <Image
-                    src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                    height="1.2rem"
-                    width="1.2rem"
-                    marginRight="1rem"
-                  ></Image>
-                  Sign up with Google
-                </Button>
-                <Button
-                  padding="1.5rem"
-                  fontWeight="normal"
-                  fontSize="medium"
-                  bgColor="white"
-                  border="2px"
-                  borderColor="#f5f5f5"
-                  _hover={{ bg: "white", borderColor: "blue.200" }}
-                >
-                  <Image src="facebook-logo.svg" height="2.1rem"></Image>
-                  Sign up with Facebook
-                </Button>
-              </Flex>
-            </Box>
-          </div>
 
-          <div className="Registration form">
-            <Flex marginBottom="1rem">
-              <Box marginRight="1rem">
-                <TextFieldInput
-                  defaultValue="Name"
-                  inputHandler={setUserName}
-                />
-              </Box>
-              <TextFieldInput defaultValue="Email" inputHandler={setUserName} />
-            </Flex>
-            <PasswordFieldInput
-              defaultValue="Password"
-              inputHandler={setPassword}
-            />
-            <TermsCheckbox></TermsCheckbox>
-          </div>
+          <SocialSignup />
 
-          <SubmitButton text="Join"></SubmitButton>
+          <RegistrationForm
+            setUserName={setUserName}
+            setPassword={setPassword}
+          />
+          <TermsCheckbox />
+
+          <SubmitButton text="Join" />
 
           <div>
-            <Flex marginTop="2.5rem">
-              <Text marginRight="1rem">Already have an account?</Text>
-              <Text textColor="red.300"> Sign in</Text>
+            <Flex
+              marginTop="2.5rem"
+              direction={["column", "column", "row", "row"]}
+            >
+              <Text marginRight="1rem" textAlign="center">
+                Already have an account?
+              </Text>
+              <Text textColor="red.300" textAlign="center">
+                {" "}
+                Sign in
+              </Text>
             </Flex>
           </div>
         </Flex>
 
-        <Flex width="50%" className="illustration">
-          <Img
-            alignSelf="center"
-            src="illustration.png"
-            alt="signup"
-            objectFit="cover"
-          ></Img>
-        </Flex>
+        <Img
+          display={["none", "none", "block", "block"]}
+          className="illustration"
+          width="50%"
+          alignSelf="center"
+          src="illustration.png"
+          alt="signup"
+          objectFit="cover"
+        ></Img>
       </Flex>
     </div>
   );

@@ -14,8 +14,8 @@ const SubmitButton: React.FC<Props> = (props: Props) => {
         boxShadow="0 5px 18px rgba(251, 76, 83, .67)"
         bgColor="red.400"
         textColor="white"
-        width="5rem"
-        height="5rem"
+        width={["100%", "100%", "100%", "5rem"]}
+        height={["4rem", "4rem", "5rem", "5rem"]}
         fontSize="1.5rem"
         fontWeight="semibold"
         textAlign="center"
