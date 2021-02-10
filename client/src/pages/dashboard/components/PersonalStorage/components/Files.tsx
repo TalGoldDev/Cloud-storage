@@ -13,19 +13,11 @@ const Files = (props: Props) => {
             View all
           </Text>
         </Flex>
-        <Flex
-          overflowX="scroll"
-          css={{ "&::-webkit-scrollbar": { display: "none" } }}
-        >
-          <Box width="33%">
-            <File />
-          </Box>
-          <Box width="33%">
-            <File />
-          </Box>
-          <Box width="33%">
-            <File />
-          </Box>
+        <Flex overflowX="scroll" paddingBottom="1rem">
+          <File />
+          <File />
+          <File />
+          <File />
         </Flex>
       </Flex>
     </div>

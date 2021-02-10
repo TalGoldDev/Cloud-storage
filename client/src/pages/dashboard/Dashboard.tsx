@@ -1,10 +1,9 @@
 import { Box, Flex, Heading, Img, Spacer, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
-import TextFieldInput from "../../common/components/TextFieldInput";
+import DetailsBar from "./components/DetailsBar/DetailsBar";
 import Menu from "./components/Menu";
-import Favorites from "./components/PersonalStorage/Favorites";
-import Files from "./components/PersonalStorage/Files";
-import Folders from "./components/PersonalStorage/Folders";
+
+import PersonalStorage from "./components/PersonalStorage/PersonalStorage";
 
 const Dashboard: React.FC = () => {
   const [search, setSearch] = useState<String>("");
@@ -13,8 +12,8 @@ const Dashboard: React.FC = () => {
     <div className="Dashboard">
       <Flex
         marginTop="5rem"
-        width="100vh"
-        height="65vh"
+        width="110vh"
+        height="70vh"
         background="white"
         rounded="2xl"
         boxShadow="lg"
@@ -29,32 +28,14 @@ const Dashboard: React.FC = () => {
         </Flex>
         <Flex
           width="60%"
-          padding="2rem"
-          justifyContent="space-between"
-          direction="column"
           borderRight="2px"
           borderColor="gray.100"
+          padding="2rem"
         >
-          <Flex justifyContent="space-between" direction="row">
-            <Flex direction="column" marginRight="3rem">
-              <Heading>My Cloud</Heading>
-              <Text marginTop="1rem" textColor="gray.400" fontWeight="medium">
-                👋 Hello User, welcome!
-              </Text>
-            </Flex>
-            <Flex>
-              <TextFieldInput
-                defaultValue="Search"
-                inputHandler={setSearch}
-              ></TextFieldInput>
-            </Flex>
-          </Flex>
-          <Favorites />
-          <Folders />
-          <Files />
+          <PersonalStorage />
         </Flex>
-        <Flex padding="2rem" width="30%">
-          Box3
+        <Flex width="20%" padding="2rem">
+          <DetailsBar />
         </Flex>
       </Flex>
     </div>
