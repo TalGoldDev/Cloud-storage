@@ -36,7 +36,7 @@ const Signup: React.FC = () => {
         rounded="2xl"
         marginTop="2rem"
         bg="white"
-        height="auto"
+        height="725px"
         width={["95%", "95%", "75vh", "90vh"]}
         boxShadow="2xl"
         direction={["column", "column", "row", "row"]}
@@ -63,14 +63,13 @@ const Signup: React.FC = () => {
 
           <div>
             <Flex
-              marginTop="2.5rem"
+              marginTop="2rem"
               direction={["column", "column", "row", "row"]}
             >
               <Text marginRight="1rem" textAlign="center">
                 Already have an account?
               </Text>
               <Text textColor="red.300" textAlign="center">
-                {" "}
                 Sign in
               </Text>
             </Flex>
