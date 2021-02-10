@@ -49,26 +49,26 @@ const FileType = (props: FileTypeProps) => {
   return (
     <div>
       <Flex
-        marginRight="2rem"
+        marginRight="2vh"
         rounded="lg"
-        paddingTop="1rem"
+        paddingTop="1.2vh"
         width="100%"
         alignItems="center"
         justifyContent="space-between"
       >
         <Flex>
           <Flex
-            width="3rem"
-            height="3rem"
+            width="4vh"
+            height="4vh"
             bgColor="gray.100"
             rounded="2xl"
             verticalAlign="center"
-            marginRight="1rem"
+            marginRight="1.2vh"
           >
             <Img
               src={props.imgSrc}
-              height="2rem"
-              width="2rem"
+              height="3vh"
+              width="3vh"
               margin="auto"
             ></Img>
           </Flex>

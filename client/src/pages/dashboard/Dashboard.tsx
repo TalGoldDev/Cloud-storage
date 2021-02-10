@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Img, Spacer, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Heading,
+  Img,
+  Spacer,
+  Text,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import DetailsBar from "./components/DetailsBar/DetailsBar";
 import Menu from "./components/Menu";
@@ -12,29 +20,45 @@ const Dashboard: React.FC = () => {
     <div className="Dashboard">
       <Flex
         marginTop="5rem"
-        width="110vh"
-        height="70vh"
+        margin="auto"
+        width={["90%", "90%", "95%", "95%", "100%"]}
+        height="100%"
         background="white"
         rounded="2xl"
         boxShadow="lg"
+        flexDirection={["column", "column", "column", "row", "row"]}
       >
         <Flex
-          width="15%"
-          borderRight="2px"
-          borderColor="gray.100"
-          padding="2rem"
+          width={["100%", "100%", "100%", "15%", "15%"]}
+          borderRight={["0px", "0px", "0px", "2px", "2px"]}
+          paddingRight="2vh"
+          borderColor={[
+            "gray.100",
+            "gray.100",
+            "gray.100",
+            "gray.100",
+            "gray.100",
+          ]}
+          padding="3vh"
         >
-          <Menu />
+          <Box width={["100%", "100%", "100%", "15%", "15%"]}>
+            <Menu />
+          </Box>
         </Flex>
-        <Flex
-          width="60%"
-          borderRight="2px"
-          borderColor="gray.100"
-          padding="2rem"
+        <Box
+          padding="3vh"
+          marginRight="1vh"
+          width={["100%", "100%", "100%", "60%"]}
+          minHeight="100%"
         >
           <PersonalStorage />
-        </Flex>
-        <Flex width="20%" padding="2rem">
+        </Box>
+        <Flex
+          width={["100%", "100%", "100%", "25%"]}
+          borderLeft="2px"
+          borderColor="gray.100"
+          padding="3vh"
+        >
           <DetailsBar />
         </Flex>
       </Flex>

@@ -6,24 +6,33 @@ interface Props {}
 const Favorites = (props: Props) => {
   return (
     <div>
-      <Flex direction="column">
+      <Flex direction="column" width="100%">
         <Text fontWeight="bold" fontSize="3xl">
           Favorites
         </Text>
-        <Flex justifyContent="space-between" direction="row">
-          <Flex alignItems="center" direction="column">
+        <Flex
+          direction={["column", "row"]}
+          justifyContent="space-between"
+          width="auto"
+        >
+          <Flex
+            marginTop="1vh"
+            alignItems="center"
+            direction={["row", "column", "column", "column"]}
+            marginRight="3vh"
+          >
             <Flex
-              width="12rem"
-              height="12rem"
+              width={["8vh", "8vh", "15vh", "15vh"]}
+              height={["8vh", "8vh", "15vh", "15vh"]}
               bgColor="#fef1e9"
               rounded="xl"
               alignItems="center"
               direction="column"
             >
-              <Box alignSelf="flex-end" paddingTop="1rem" paddingRight="1rem">
+              <Box alignSelf="flex-end" paddingTop="1vh" paddingRight="1vh">
                 <svg
-                  height="1rem"
-                  width="1rem"
+                  height="1.5vh"
+                  width="1.5vh"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -39,29 +48,41 @@ const Favorites = (props: Props) => {
               </Box>
               <Img
                 src="/pictures.png"
-                width="8rem"
-                height="8rem"
-                marginW="auto"
+                marginTop={["0vh", "0vh", "1vh"]}
+                width={["5vh", "5vh", "8vh", "8vh"]}
+                height={["5vh", "5vh", "8vh", "8vh"]}
+                marginWidth="auto"
               ></Img>
             </Flex>
-            <Text fontWeight="semibold" fontSize="2xl" marginTop="1rem">
+            <Text
+              fontWeight="semibold"
+              fontSize={["lg", "xl", "2xl", "2xl"]}
+              marginTop="1vh"
+              textAlign="center"
+              marginLeft={["1vh", "0vh"]}
+            >
               All Images
             </Text>
           </Flex>
 
-          <Flex alignItems="center" direction="column">
+          <Flex
+            alignItems="center"
+            marginTop="1vh"
+            direction={["row", "column", "column", "column"]}
+            marginRight="3vh"
+          >
             <Flex
-              width="12rem"
-              height="12rem"
+              width={["8vh", "8vh", "15vh", "15vh"]}
+              height={["8vh", "8vh", "15vh", "15vh"]}
               bgColor="#e9f1f3"
               rounded="xl"
               alignItems="center"
               direction="column"
             >
-              <Box alignSelf="flex-end" paddingTop="1rem" paddingRight="1rem">
+              <Box alignSelf="flex-end" paddingTop="1vh" paddingRight="1vh">
                 <svg
-                  height="1rem"
-                  width="1rem"
+                  height="1.5vh"
+                  width="1.5vh"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -77,28 +98,40 @@ const Favorites = (props: Props) => {
               </Box>
               <Img
                 src="/folders.png"
-                width="8rem"
-                height="8rem"
-                marginW="auto"
+                marginTop={["0vh", "0vh", "1vh"]}
+                width={["5vh", "5vh", "8vh", "8vh"]}
+                height={["5vh", "5vh", "8vh", "8vh"]}
+                marginWidth="auto"
               ></Img>
             </Flex>
-            <Text fontWeight="semibold" fontSize="2xl" marginTop="1rem">
+            <Text
+              fontWeight="semibold"
+              fontSize={["lg", "xl", "2xl", "2xl"]}
+              marginTop="1vh"
+              textAlign="center"
+              marginLeft={["1vh", "0vh"]}
+            >
               All Archives
             </Text>
           </Flex>
-          <Flex alignItems="center" direction="column">
+          <Flex
+            marginTop="1vh"
+            alignItems="center"
+            direction={["row", "column", "column", "column"]}
+            marginRight="3vh"
+          >
             <Flex
-              width="12rem"
-              height="12rem"
+              width={["8vh", "8vh", "15vh", "15vh"]}
+              height={["8vh", "8vh", "15vh", "15vh"]}
               bgColor="#e9efff"
               rounded="xl"
               alignItems="center"
               direction="column"
             >
-              <Box alignSelf="flex-end" paddingTop="1rem" paddingRight="1rem">
+              <Box alignSelf="flex-end" paddingTop="1vh" paddingRight="1vh">
                 <svg
-                  height="1rem"
-                  width="1rem"
+                  height="1.5vh"
+                  width="1.5vh"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -114,12 +147,19 @@ const Favorites = (props: Props) => {
               </Box>
               <Img
                 src="/document.png"
-                width="8rem"
-                height="8rem"
-                marginW="auto"
+                marginTop={["0vh", "0vh", "1vh"]}
+                width={["5vh", "5vh", "8vh", "8vh"]}
+                height={["5vh", "5vh", "8vh", "8vh"]}
+                marginWidth="auto"
               ></Img>
             </Flex>
-            <Text fontWeight="semibold" fontSize="2xl" marginTop="1rem">
+            <Text
+              fontWeight="semibold"
+              fontSize={["lg", "xl", "2xl", "2xl"]}
+              marginTop="1vh"
+              textAlign="center"
+              marginLeft={["1vh", "0vh"]}
+            >
               All Documents
             </Text>
           </Flex>

@@ -9,22 +9,22 @@ interface Props {}
 const DetailsBar = (props: Props) => {
   return (
     <div>
-      <Flex direction="column">
-        <Flex justifyContent="space-between" direction="row">
-          <div>
+      <Flex direction="column" width="100%" height="100%">
+        <Flex justifyContent="space-between" direction="row" width="100%">
+          <Flex direction="column">
             <Text fontWeight="semibold" fontSize="3xl" textColor="blue.400">
               0.4GB
             </Text>
             <Text fontWeight="medium">Used</Text>
-          </div>
-          <div>
+          </Flex>
+          <Flex direction="column">
             <Text fontWeight="semibold" fontSize="3xl" textColor="gray.400">
               1GB
             </Text>
             <Text textColor="blue.400" fontWeight="medium">
               Upgrade
             </Text>
-          </div>
+          </Flex>
         </Flex>
         <ProgressBar />
 

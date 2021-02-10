@@ -6,24 +6,31 @@ interface Props {}
 const Menu: React.FC<Props> = (props: Props) => {
   return (
     <div>
-      <Flex direction="column" justifyContent="space-between">
-        <Flex height="20%">
+      <Flex
+        direction={["row", "row", "row", "column", "column"]}
+        justifyContent="space-between"
+        width="100%"
+      >
+        <Flex height="auto" marginRight="2vh">
           <Heading>Logo</Heading>
         </Flex>
 
         <Flex
-          direction="column"
+          direction={["row", "row", "row", "column", "column"]}
           justifyContent="space-between"
-          height="70%"
-          marginTop="2rem"
+          height="100%"
+          marginTop={["1vh", "1vh", "1vh", "3vh", "3vh"]}
         >
           <div>
-            <Flex direction="column">
-              <Flex alignItems="center">
-                <Box marginRight="0.5rem">
+            <Flex
+              direction={["row", "row", "row", "column", "column"]}
+              display={["none", "none", "none", "block", "block"]}
+            >
+              <Flex alignItems="center" marginRight="1vh">
+                <Box marginRight="1vh">
                   <svg
-                    height="1.5rem"
-                    width="1.5rem"
+                    height="2vh"
+                    width="2vh"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -41,12 +48,12 @@ const Menu: React.FC<Props> = (props: Props) => {
                   <Text fontWeight="semibold">Cloud</Text>
                 </a>
               </Flex>
-              <Spacer marginTop="2rem" />
-              <Flex alignItems="center" textColor="gray.500">
-                <Box marginRight="0.5rem">
+              <Spacer marginTop="3vh" />
+              <Flex alignItems="center" textColor="gray.500" marginRight="1vh">
+                <Box marginRight="1vh">
                   <svg
-                    height="1.5rem"
-                    width="1.5rem"
+                    height="2vh"
+                    width="2vh"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -64,13 +71,13 @@ const Menu: React.FC<Props> = (props: Props) => {
                   <Text fontWeight="semibold">Shared</Text>
                 </a>
               </Flex>
-              <Spacer marginTop="2rem" />
+              <Spacer marginTop="3vh" />
 
-              <Flex alignItems="center" textColor="gray.500">
-                <Box marginRight="0.5rem">
+              <Flex alignItems="center" textColor="gray.500" marginRight="1vh">
+                <Box marginRight="1vh">
                   <svg
-                    height="1.5rem"
-                    width="1.5rem"
+                    height="2vh"
+                    width="2vh"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -88,12 +95,12 @@ const Menu: React.FC<Props> = (props: Props) => {
                   <Text fontWeight="semibold">Favorites</Text>
                 </a>
               </Flex>
-              <Spacer marginTop="2rem" />
-              <Flex alignItems="center" textColor="gray.500">
-                <Box marginRight="0.5rem">
+              <Spacer marginTop="3vh" />
+              <Flex alignItems="center" textColor="gray.500" marginRight="1vh">
+                <Box marginRight="1vh">
                   <svg
-                    height="1.5rem"
-                    width="1.5rem"
+                    height="2vh"
+                    width="2vh"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -114,12 +121,15 @@ const Menu: React.FC<Props> = (props: Props) => {
             </Flex>
           </div>
           <div>
-            <Flex direction="column" marginTop="3rem">
-              <Flex alignItems="center" textColor="gray.500">
-                <Box marginRight="0.5rem">
+            <Flex
+              direction={["row", "row", "row", "column", "column"]}
+              marginTop={["0.5vh", "0.5vh", "0.5vh", "4vh", "4vh"]}
+            >
+              <Flex alignItems="center" textColor="gray.500" marginRight="1vh">
+                <Box marginRight="1vh">
                   <svg
-                    width="1.5rem"
-                    height="1.5rem"
+                    width="2vh"
+                    height="2vh"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -137,12 +147,12 @@ const Menu: React.FC<Props> = (props: Props) => {
                   <Text fontWeight="semibold">Help</Text>
                 </a>
               </Flex>
-              <Spacer marginTop="2rem" />
-              <Flex alignItems="center" textColor="gray.500">
-                <Box marginRight="0.5rem">
+              <Spacer marginTop={["1vh", "1vh", "1vh", "3vh", "3vh"]} />
+              <Flex alignItems="center" textColor="gray.500" marginRight="1vh">
+                <Box marginRight="1vh">
                   <svg
-                    height="1.5rem"
-                    width="1.5rem"
+                    height="2vh"
+                    width="2vh"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -169,8 +179,13 @@ const Menu: React.FC<Props> = (props: Props) => {
             </Flex>
           </div>
         </Flex>
-        <Flex marginTop="4rem" height="10%">
-          Logo2
+        <Flex
+          marginTop="5vh"
+          display={["none", "none", "none", "block", "block"]}
+          height="auto"
+          width="5vh"
+        >
+          <Text>Logo2</Text>
         </Flex>
       </Flex>
     </div>

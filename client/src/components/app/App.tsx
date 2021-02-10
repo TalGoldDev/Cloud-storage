@@ -4,25 +4,24 @@ import { Header } from "../header/Header";
 import { Route, Switch } from "react-router-dom";
 import Signup from "../../pages/signup/Signup.page";
 import Login from "../../pages/login/Login.page";
-import { Container } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Dashboard from "../../pages/dashboard/Dashboard";
 
 export const App: React.FC = () => {
   return (
     <div className="App">
-      <Box
+      <Flex
         width="100%"
-        height="100vh"
+        height="100%"
         bgGradient="linear(to-br, #ffffff, #b9c5df)"
-        marginX="auto"
-        marginY="auto"
+        bgColor="#b9c5df"
       >
-        <Container
-          centerContent
-          width="full"
-          height="100vh"
-          alignContent="center"
+        <Flex
+          width="100%"
+          height="100%"
+          alignItems="center"
+          direction="column"
           padding="1rem"
         >
           <Header />
@@ -37,8 +36,8 @@ export const App: React.FC = () => {
               <Dashboard />
             </Route>
           </Switch>
-        </Container>
-      </Box>
+        </Flex>
+      </Flex>
     </div>
   );
 };

@@ -6,25 +6,31 @@ interface Props {}
 const Folders = (props: Props) => {
   return (
     <div>
-      <Flex direction="column" marginTop="1rem">
-        <Flex justifyContent="space-between" alignItems="center">
+      <Flex direction="column" marginTop="1vh">
+        <Flex justifyContent="space-between" width="auto" alignItems="center">
           <Text fontSize="2xl">Folders</Text>
           <Text fontSize="lg" textColor="blue.400">
             View all
           </Text>
         </Flex>
-        <Flex marginTop="1rem">
+        <Flex
+          marginTop="1vh"
+          alignItems="center"
+          direction="row"
+          flexWrap="wrap"
+        >
           <Flex
             justifyContent="space-between"
-            marginRight="2rem"
+            marginRight="3vh"
+            marginBottom="1vh"
             border="2px"
             rounded="2xl"
-            padding="0.8rem"
+            padding="1vh"
             borderColor="gray.100"
-            width="12rem"
+            width={["100%", "18vh", "18vh", "18vh"]}
           >
             <Flex direction="column" justifyContent="space-between">
-              <Img src="/folder.png" height="2.5rem" width="2.5rem"></Img>
+              <Img src="/folder.png" height="4vh" width="4vh"></Img>
               <Text fontSize="xl">Assets</Text>
               <Text fontSize="lg" fontWeight="normal" textColor="gray.400">
                 25 Files
@@ -32,8 +38,8 @@ const Folders = (props: Props) => {
             </Flex>
             <Box color="gray.300">
               <svg
-                width="2rem"
-                height="2rem"
+                width="3vh"
+                height="3vh"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -50,15 +56,16 @@ const Folders = (props: Props) => {
           </Flex>
           <Flex
             justifyContent="space-between"
-            marginRight="2rem"
+            marginRight="3vh"
+            marginBottom="1vh"
             border="2px"
             rounded="2xl"
-            padding="0.8rem"
+            padding="1vh"
             borderColor="gray.100"
-            width="12rem"
+            width={["100%", "18vh", "18vh", "18vh"]}
           >
             <Flex direction="column" justifyContent="space-between">
-              <Img src="/folder.png" height="2.5rem" width="2.5rem"></Img>
+              <Img src="/folder.png" height="4vh" width="4vh"></Img>
               <Text fontSize="xl">Marketing</Text>
               <Text fontSize="lg" fontWeight="normal" textColor="gray.400">
                 25 Files
@@ -66,8 +73,8 @@ const Folders = (props: Props) => {
             </Flex>
             <Box color="gray.300">
               <svg
-                width="2rem"
-                height="2rem"
+                width="3vh"
+                height="3vh"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -84,14 +91,16 @@ const Folders = (props: Props) => {
           </Flex>
           <Flex
             justifyContent="space-between"
+            marginBottom="1vh"
             border="2px"
             rounded="2xl"
-            padding="0.8rem"
+            padding="1vh"
+            marginRight="3vh"
             borderColor="gray.100"
-            width="12rem"
+            width={["100%", "18vh", "18vh", "18vh"]}
           >
             <Flex direction="column" justifyContent="space-between">
-              <Img src="/folder.png" height="2.5rem" width="2.5rem"></Img>
+              <Img src="/folder.png" height="4vh" width="4vh"></Img>
               <Text fontSize="xl">Personal</Text>
               <Text fontSize="lg" fontWeight="normal" textColor="gray.400">
                 25 Files
@@ -99,8 +108,8 @@ const Folders = (props: Props) => {
             </Flex>
             <Box color="gray.300">
               <svg
-                width="2rem"
-                height="2rem"
+                width="3vh"
+                height="3vh"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
