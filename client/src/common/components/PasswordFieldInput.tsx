@@ -1,36 +1,30 @@
 import React from "react";
 import { InputField } from "../interfaces/InputField";
-import { Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
+import {
+  Button,
+  FormControl,
+  FormLabel,
+  Input,
+  InputGroup,
+  InputRightElement,
+} from "@chakra-ui/react";
 
-interface passwordInputField extends InputField {
-  showPassword: boolean;
-  setDisplayPassword: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-const PasswordFieldInput: React.FC<passwordInputField> = (
-  props: passwordInputField
-) => {
+const PasswordFieldInput: React.FC<InputField> = (props: InputField) => {
   return (
     <div>
-      <InputGroup size="md" marginTop="1rem">
+      <FormControl marginTop="1rem">
+        <FormLabel>{props.defaultValue}</FormLabel>
         <Input
+          border="2px"
+          borderColor="gray.100"
+          _focus={{ bgColor: "gray.100" }}
+          height="3rem"
+          variant="filled"
           pr="4.5rem"
-          type={props.showPassword ? "text" : "password"}
-          placeholder={props.defaultValue}
+          type={"password"}
           onChange={(event): void => props.inputHandler(event.target.value)}
         />
-        <InputRightElement width="4.5rem">
-          <Button
-            h="1.75rem"
-            size="sm"
-            onClick={(): void => {
-              props.setDisplayPassword(!props.showPassword);
-            }}
-          >
-            {props.showPassword ? "Hide" : "Show"}
-          </Button>
-        </InputRightElement>
-      </InputGroup>
+      </FormControl>
     </div>
   );
 };
