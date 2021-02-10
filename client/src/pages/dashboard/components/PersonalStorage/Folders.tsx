@@ -6,7 +6,7 @@ interface Props {}
 const Folders = (props: Props) => {
   return (
     <div>
-      <Flex direction="column">
+      <Flex direction="column" marginTop="1rem">
         <Flex justifyContent="space-between" alignItems="center">
           <Text fontSize="2xl">Folders</Text>
           <Text fontSize="lg" textColor="blue.400">

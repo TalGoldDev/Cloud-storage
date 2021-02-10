@@ -6,115 +6,58 @@ interface Props {}
 const Files = (props: Props) => {
   return (
     <div>
-      <Flex direction="column">
+      <Flex direction="column" marginTop="1rem">
         <Flex justifyContent="space-between" alignItems="center">
-          <Text fontSize="2xl">Folders</Text>
+          <Text fontSize="2xl">Files</Text>
           <Text fontSize="lg" textColor="blue.400">
             View all
           </Text>
         </Flex>
-        <Flex marginTop="1rem">
-          <Flex
-            justifyContent="space-between"
-            marginRight="2rem"
-            border="2px"
-            rounded="2xl"
-            padding="0.8rem"
-            borderColor="gray.100"
-            width="12rem"
-          >
-            <Flex direction="column">
-              <Img src="/folder.png" height="3rem" width="3rem"></Img>
-              <Text fontSize="xl">Assets</Text>
-              <Text fontSize="lg" fontWeight="normal" textColor="gray.400">
-                25 Files
-              </Text>
-            </Flex>
-            <Box color="gray.300">
-              <svg
-                width="2rem"
-                height="2rem"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </Box>
-          </Flex>
-          <Flex
-            justifyContent="space-between"
-            marginRight="2rem"
-            border="2px"
-            rounded="2xl"
-            padding="0.8rem"
-            borderColor="gray.100"
-            width="12rem"
-          >
-            <Flex direction="column">
-              <Img src="/folder.png" height="3rem" width="3rem"></Img>
-              <Text fontSize="xl">Marketing</Text>
-              <Text fontSize="lg" fontWeight="normal" textColor="gray.400">
-                25 Files
-              </Text>
-            </Flex>
-            <Box color="gray.300">
-              <svg
-                width="2rem"
-                height="2rem"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </Box>
-          </Flex>
-          <Flex
-            justifyContent="space-between"
-            border="2px"
-            rounded="2xl"
-            padding="0.8rem"
-            borderColor="gray.100"
-            width="12rem"
-          >
-            <Flex direction="column">
-              <Img src="/folder.png" height="3rem" width="3rem"></Img>
-              <Text fontSize="xl">Personal</Text>
-              <Text fontSize="lg" fontWeight="normal" textColor="gray.400">
-                25 Files
-              </Text>
-            </Flex>
-            <Box color="gray.300">
-              <svg
-                width="2rem"
-                height="2rem"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </Box>
-          </Flex>
+        <Flex
+          overflowX="scroll"
+          css={{ "&::-webkit-scrollbar": { display: "none" } }}
+        >
+          <Box width="33%">
+            <File />
+          </Box>
+          <Box width="33%">
+            <File />
+          </Box>
+          <Box width="33%">
+            <File />
+          </Box>
+        </Flex>
+      </Flex>
+    </div>
+  );
+};
+
+interface Props {}
+
+const File = (props: Props) => {
+  return (
+    <div>
+      <Flex marginRight="2rem" rounded="2xl" paddingTop="1rem" width="auto">
+        <Flex
+          width="4rem"
+          height="4rem"
+          bgColor="gray.100"
+          rounded="2xl"
+          verticalAlign="center"
+          marginRight="1rem"
+        >
+          <Img
+            src="/document.png"
+            height="3rem"
+            width="3rem"
+            margin="auto"
+          ></Img>
+        </Flex>
+        <Flex direction="column">
+          <Text fontSize="xl">Abstract.doc</Text>
+          <Text fontSize="lg" fontWeight="normal" textColor="gray.400">
+            Added today
+          </Text>
         </Flex>
       </Flex>
     </div>

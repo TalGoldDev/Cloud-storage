@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TextFieldInput from "../../common/components/TextFieldInput";
 import Menu from "./components/Menu";
 import Favorites from "./components/PersonalStorage/Favorites";
+import Files from "./components/PersonalStorage/Files";
 import Folders from "./components/PersonalStorage/Folders";
 
 const Dashboard: React.FC = () => {
@@ -13,7 +14,7 @@ const Dashboard: React.FC = () => {
       <Flex
         marginTop="5rem"
         width="100vh"
-        height="60vh"
+        height="65vh"
         background="white"
         rounded="2xl"
         boxShadow="lg"
@@ -50,6 +51,7 @@ const Dashboard: React.FC = () => {
           </Flex>
           <Favorites />
           <Folders />
+          <Files />
         </Flex>
         <Flex padding="2rem" width="30%">
           Box3
