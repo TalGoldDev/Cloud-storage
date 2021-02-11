@@ -19,18 +19,40 @@ import TextFieldInput from "../../common/components/TextFieldInput";
 import RegistrationForm from "./components/RegistrationForm";
 import SocialSignup from "./components/SocialSignup";
 import TermsCheckbox from "./components/TermsCheckbox";
+import { Redirect } from "react-router-dom";
 
 const Signup: React.FC = () => {
-  const [userName, setUserName] = React.useState<String>("");
-  const [password, setPassword] = React.useState<String>("");
+  const [userName, setUserName] = React.useState<string>("");
+  const [password, setPassword] = React.useState<string>("");
+  const [redirect, setRedirect] = React.useState<boolean>(false);
+  const [redirectRoute, setRedirectRoute] = React.useState<string>("/");
 
-  const submitForm = (userName: String, password: String): boolean => {
+  const submitForm = (userName: string, password: string): void => {
     console.log("Form Submitted");
     console.log(userName, password);
-    return true;
+
+    // if authentication completed succesfully.
+    if (true) {
+      redirectToDashboard();
+    } else {
+      // display error
+      console.log("error");
+    }
   };
 
-  return (
+  const redirectToDashboard = () => {
+    setRedirect(true);
+    setRedirectRoute("/");
+  };
+
+  const redirectToLogin = () => {
+    setRedirect(true);
+    setRedirectRoute("/login");
+  };
+
+  return redirect ? (
+    <Redirect to={redirectRoute} />
+  ) : (
     <div className="signup">
       <Flex
         rounded="2xl"
@@ -59,7 +81,7 @@ const Signup: React.FC = () => {
           />
           <TermsCheckbox />
 
-          <SubmitButton text="Join" />
+          <SubmitButton text="Join" clickEvent={submitForm} />
 
           <div>
             <Flex
@@ -69,7 +91,11 @@ const Signup: React.FC = () => {
               <Text marginRight="1rem" textAlign="center">
                 Already have an account?
               </Text>
-              <Text textColor="red.300" textAlign="center">
+              <Text
+                textColor="red.300"
+                onClick={redirectToLogin}
+                textAlign="center"
+              >
                 Sign in
               </Text>
             </Flex>

@@ -10,7 +10,7 @@ const TermsCheckbox: React.FC<Props> = (props: Props) => {
         <Checkbox
           variant="flushed"
           width={["100%", "100%", "90%", "90%"]}
-          defaultIsChecked
+          defaultChecked
         >
           <Text marginLeft="0.5rem">
             I've read and agree with Terms of Service and our Privacy Policy

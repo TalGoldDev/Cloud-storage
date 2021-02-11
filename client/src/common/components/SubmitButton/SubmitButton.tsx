@@ -3,12 +3,16 @@ import React from "react";
 
 interface Props {
   text: string;
+  clickEvent: Function;
 }
 
 const SubmitButton: React.FC<Props> = (props: Props) => {
   return (
     <div>
       <Button
+        onClick={() => {
+          props.clickEvent();
+        }}
         marginTop="2rem"
         rounded="2xl"
         boxShadow="0 5px 18px rgba(251, 76, 83, .67)"

@@ -3,12 +3,40 @@ import React from "react";
 import SubmitButton from "../../common/components/SubmitButton/SubmitButton";
 import LoginForm from "./components/LoginForm";
 import SocialLogin from "./components/SocialLogin";
+import { Redirect } from "react-router-dom";
 
 const Login: React.FC = () => {
-  const [userName, setUserName] = React.useState<String>("");
-  const [password, setPassword] = React.useState<String>("");
+  const [userName, setUserName] = React.useState<string>("");
+  const [password, setPassword] = React.useState<string>("");
+  const [redirect, setRedirect] = React.useState<boolean>(false);
+  const [redirectRoute, setRedirectRoute] = React.useState<string>("/");
 
-  return (
+  const submitForm = (userName: string, password: string): void => {
+    console.log("Form Submitted");
+    console.log(userName, password);
+
+    // if authentication completed succesfully.
+    if (true) {
+      redirectToDashboard();
+    } else {
+      // display error
+      console.log("error");
+    }
+  };
+
+  const redirectToDashboard = () => {
+    setRedirect(true);
+    setRedirectRoute("/");
+  };
+
+  const redirectToRegister = () => {
+    setRedirect(true);
+    setRedirectRoute("/register");
+  };
+
+  return redirect ? (
+    <Redirect to={redirectRoute} />
+  ) : (
     <div className="login">
       <Flex
         rounded="2xl"
@@ -33,7 +61,7 @@ const Login: React.FC = () => {
 
           <LoginForm setUserName={setUserName} setPassword={setPassword} />
 
-          <SubmitButton text="Login" />
+          <SubmitButton text="Login" clickEvent={submitForm} />
 
           <div>
             <Flex
@@ -43,7 +71,11 @@ const Login: React.FC = () => {
               <Text marginRight="1rem" textAlign="center">
                 Don't have an account yet?
               </Text>
-              <Text textColor="red.300" textAlign="center">
+              <Text
+                textColor="red.300"
+                onClick={redirectToRegister}
+                textAlign="center"
+              >
                 Sign up
               </Text>
             </Flex>

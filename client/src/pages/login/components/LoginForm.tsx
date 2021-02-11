@@ -4,8 +4,8 @@ import PasswordFieldInput from "../../../common/components/PasswordFieldInput";
 import TextFieldInput from "../../../common/components/TextFieldInput";
 
 interface Props {
-  setUserName: React.Dispatch<React.SetStateAction<String>>;
-  setPassword: React.Dispatch<React.SetStateAction<String>>;
+  setUserName: React.Dispatch<React.SetStateAction<string>>;
+  setPassword: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const LoginForm: React.FC<Props> = (props: Props) => {

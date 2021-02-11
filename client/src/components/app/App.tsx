@@ -13,7 +13,7 @@ export const App: React.FC = () => {
     <div className="App">
       <Flex
         width="100%"
-        height="100%"
+        height={["100%", "100%", "100%", "100vh", "100vh", "100vh"]}
         bgGradient="linear(to-br, #ffffff, #b9c5df)"
         bgColor="#b9c5df"
       >
@@ -24,7 +24,7 @@ export const App: React.FC = () => {
           direction="column"
           padding="1rem"
         >
-          <Header />
+          {/* <Header /> */}
           <Switch>
             <Route path="/register">
               <Signup />

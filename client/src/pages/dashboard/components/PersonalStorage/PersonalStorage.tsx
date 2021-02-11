@@ -8,7 +8,7 @@ import Files from "./components/Files";
 interface Props {}
 
 const PersonalStorage = (props: Props) => {
-  const [search, setSearch] = useState<String>("");
+  const [search, setSearch] = useState<string>("");
 
   return (
     <div className="personal-storage">
