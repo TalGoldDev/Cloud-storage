@@ -2,6 +2,7 @@ import express from "express";
 import { accessControlAllowOrigin } from "./middleware/cors";
 import { router } from "./routes";
 import dotenv from "dotenv";
+import { selectAllRows } from "./api/register";
 
 dotenv.config();
 
