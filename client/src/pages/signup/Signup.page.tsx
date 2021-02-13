@@ -20,19 +20,28 @@ import RegistrationForm from "./components/RegistrationForm";
 import SocialSignup from "./components/SocialSignup";
 import TermsCheckbox from "./components/TermsCheckbox";
 import { Redirect } from "react-router-dom";
+import { registerUser } from "../../api/register";
 
 const Signup: React.FC = () => {
   const [userName, setUserName] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
+  const [email, setEmail] = React.useState<string>("");
   const [redirect, setRedirect] = React.useState<boolean>(false);
   const [redirectRoute, setRedirectRoute] = React.useState<string>("/");
 
-  const submitForm = (userName: string, password: string): void => {
-    console.log("Form Submitted");
-    console.log(userName, password);
+  const submitForm = async (
+    userName: string,
+    password: string,
+    email: string
+  ) => {
+    // validate form before submission.
 
+    // if validation passed:
+    let result = await registerUser(userName, password, email);
+
+    console.log(result);
     // if authentication completed succesfully.
-    if (true) {
+    if (result) {
       redirectToDashboard();
     } else {
       // display error
@@ -78,10 +87,16 @@ const Signup: React.FC = () => {
           <RegistrationForm
             setUserName={setUserName}
             setPassword={setPassword}
+            setEmail={setEmail}
           />
           <TermsCheckbox />
 
-          <SubmitButton text="Join" clickEvent={submitForm} />
+          <SubmitButton
+            text="Join"
+            clickEvent={() => {
+              submitForm(userName, password, email);
+            }}
+          />
 
           <div>
             <Flex

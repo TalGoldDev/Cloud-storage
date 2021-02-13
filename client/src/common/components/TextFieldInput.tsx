@@ -12,7 +12,6 @@ const TextFieldInput: React.FC<InputField> = (props: InputField) => {
           borderColor="gray.100"
           height="3rem"
           variant="filled"
-          pr="4.5rem"
           type={"text"}
           _focus={{ bgColor: "gray.100" }}
           onChange={(event): void => props.inputHandler(event.target.value)}

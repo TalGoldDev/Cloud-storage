@@ -12,7 +12,13 @@ const Favorites = (props: Props) => {
         </Text>
         <Flex
           direction={["column", "row"]}
-          justifyContent="space-between"
+          justifyContent={[
+            "space-between",
+            "space-between",
+            "space-between",
+            "space-between",
+            "flex-start",
+          ]}
           width="auto"
         >
           <Flex

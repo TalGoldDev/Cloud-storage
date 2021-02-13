@@ -20,7 +20,6 @@ const PasswordFieldInput: React.FC<InputField> = (props: InputField) => {
           _focus={{ bgColor: "gray.100" }}
           height="3rem"
           variant="filled"
-          pr="4.5rem"
           type={"password"}
           onChange={(event): void => props.inputHandler(event.target.value)}
         />
