@@ -4,8 +4,9 @@ import { router } from "./routes";
 
 const app: express.Application = express();
 
-app.use(router);
 app.use(accessControlAllowOrigin);
+app.use(express.json());
+app.use(router);
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, ()=> {
