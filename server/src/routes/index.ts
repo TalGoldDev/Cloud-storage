@@ -1,6 +1,7 @@
 import express, { Request, Response, Router } from "express";
 import { AddUserToDatabase } from "../database/create";
 import { getUserFromDB } from "../database/read";
+import bcrypt from "bcryptjs";
 
 export const router: Router = express.Router();
 
@@ -9,6 +10,13 @@ router.get("/", (req: Request, res: Response) => {
 });
 
 router.post("/register", async (req: Request, res: Response) => {
+  let hash = bcrypt.hashSync(
+    req.body.password,
+    parseInt(process.env.BCRYPT_WORK_FACTOR!)
+  );
+
+  req.body.password = hash;
+
   let { name, password, email, memberlevel } = req.body;
   let result = await AddUserToDatabase(name, password, email, memberlevel);
   if (result) {
@@ -20,16 +28,14 @@ router.post("/register", async (req: Request, res: Response) => {
 });
 
 router.post("/login", async (req: Request, res: Response) => {
-  console.log("login");
-  let { password, email } = req.body;
-  let user = await getUserFromDB(email);
+  let user = await getUserFromDB(req.body.email);
 
   // check if user exists
   if (user == null) {
     return res.send("User not found");
   }
 
-  if (password == user.password) {
+  if (bcrypt.compareSync(req.body.password, user.password)) {
     return res.send(true);
   } else {
     return res.send(false);
