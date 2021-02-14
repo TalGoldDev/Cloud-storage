@@ -14,5 +14,5 @@ app.use(router);
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
-  console.log("started at: 3001");
+  console.log("started at: " + port);
 });
