@@ -1,6 +1,9 @@
 import express from "express";
 import { accessControlAllowOrigin } from "./middleware/cors";
-import { router } from "./routes";
+
+import { router as mainRoutes } from "./routes/index";
+import { router as authRoutes } from "./routes/auth";
+
 import dotenv from "dotenv";
 import sessions from "client-sessions";
 import { loadUserFromSession } from "./middleware/auth";
@@ -29,7 +32,8 @@ app.use(loadUserFromSession);
 
 //app.use(express.json());
 
-app.use(router);
+app.use(mainRoutes);
+app.use(authRoutes);
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
