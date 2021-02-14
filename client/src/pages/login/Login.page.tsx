@@ -4,19 +4,21 @@ import SubmitButton from "../../common/components/SubmitButton/SubmitButton";
 import LoginForm from "./components/LoginForm";
 import SocialLogin from "./components/SocialLogin";
 import { Redirect } from "react-router-dom";
+import { loginRequest } from "../../api/login";
 
 const Login: React.FC = () => {
-  const [userName, setUserName] = React.useState<string>("");
+  const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
   const [redirect, setRedirect] = React.useState<boolean>(false);
   const [redirectRoute, setRedirectRoute] = React.useState<string>("/");
 
-  const submitForm = (userName: string, password: string): void => {
-    console.log("Form Submitted");
-    console.log(userName, password);
+  const submitForm = async (email: string, password: string) => {
+    // if validation passed:
+    let result = await loginRequest(email, password);
 
+    console.log(result);
     // if authentication completed succesfully.
-    if (true) {
+    if (result) {
       redirectToDashboard();
     } else {
       // display error
@@ -59,9 +61,14 @@ const Login: React.FC = () => {
 
           <SocialLogin />
 
-          <LoginForm setUserName={setUserName} setPassword={setPassword} />
+          <LoginForm setEmail={setEmail} setPassword={setPassword} />
 
-          <SubmitButton text="Login" clickEvent={submitForm} />
+          <SubmitButton
+            text="Login"
+            clickEvent={() => {
+              submitForm(email, password);
+            }}
+          />
 
           <div>
             <Flex

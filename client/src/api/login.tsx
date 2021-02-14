@@ -8,6 +8,10 @@ export const loginRequest = async (email: string, password: string) => {
     password,
   });
 
-  console.log(result.data);
-  return result;
+  if (result.data == "User not found") {
+    console.log(result.data);
+    return false;
+  }
+
+  return result.data;
 };

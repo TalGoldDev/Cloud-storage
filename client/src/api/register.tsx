@@ -16,5 +16,5 @@ export const registerUser = async (
   });
 
   console.log(result.data);
-  return result;
+  return result.data;
 };
