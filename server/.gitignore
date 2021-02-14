@@ -43,3 +43,6 @@ yarn.lock
 #API request testing
 .rest
 requests.rest
+
+# important settings
+settings.js
