@@ -4,7 +4,7 @@ import { Header } from "../header/Header";
 import { Route, Switch } from "react-router-dom";
 import Signup from "../../pages/signup/Signup.page";
 import Login from "../../pages/login/Login.page";
-import { Container, Flex } from "@chakra-ui/react";
+import { Container, Flex, Text } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import Dashboard from "../../pages/dashboard/Dashboard";
 

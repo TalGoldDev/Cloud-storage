@@ -23,4 +23,5 @@ const authSlice = createSlice({
   },
 });
 
+export const authSelector = (state: { auth: any }) => state.auth;
 export default authSlice.reducer;
