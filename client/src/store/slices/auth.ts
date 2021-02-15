@@ -3,28 +3,24 @@ import { createSlice } from "@reduxjs/toolkit";
 export const initialState = {
   loading: false,
   hasErrors: false,
-  user: [],
 };
 
-// A slice for user with our 3 reducers
-const userSlice = createSlice({
-  name: "user",
+const authSlice = createSlice({
+  name: "auth",
   initialState,
   reducers: {
-    getUser: (state) => {
+    getAuth: (state) => {
       state.loading = true;
     },
-    getUserSuccess: (state, { payload }) => {
-      state.recipes = payload;
+    getAuthSuccess: (state) => {
       state.loading = false;
       state.hasErrors = false;
     },
-    getUserFailure: (state) => {
+    getAuthFailure: (state) => {
       state.loading = false;
       state.hasErrors = true;
     },
   },
 });
 
-// The reducer
-export default userSlice.reducer;
+export default authSlice.reducer;
