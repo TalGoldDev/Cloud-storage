@@ -5,20 +5,26 @@ import LoginForm from "./components/LoginForm";
 import SocialLogin from "./components/SocialLogin";
 import { Redirect } from "react-router-dom";
 import { loginRequest } from "../../api/login";
+import { useDispatch, useSelector } from "react-redux";
+import { setEmail, userSelector } from "../../store/slices/user";
+import { authSelector, getAuthorization } from "../../store/slices/auth";
 
 const Login: React.FC = () => {
-  const [email, setEmail] = React.useState<string>("");
+  //const [email, setEmail] = React.useState<string>("");
   const [password, setPassword] = React.useState<string>("");
   const [redirect, setRedirect] = React.useState<boolean>(false);
   const [redirectRoute, setRedirectRoute] = React.useState<string>("/");
 
-  const submitForm = async (email: string, password: string) => {
-    // if validation passed:
-    let result = await loginRequest(email, password);
+  const dispatch = useDispatch();
+  const { email } = useSelector(userSelector);
+  const { authorized } = useSelector(authSelector);
 
-    console.log(result);
+  const submitForm = async () => {
+    // if validation passed:
+    getAuthorization(email, password, false);
+
     // if authentication completed succesfully.
-    if (result) {
+    if (authorized) {
       redirectToDashboard();
     } else {
       // display error
@@ -61,12 +67,17 @@ const Login: React.FC = () => {
 
           <SocialLogin />
 
-          <LoginForm setEmail={setEmail} setPassword={setPassword} />
+          <LoginForm
+            setEmail={(email) => {
+              dispatch(setEmail(email));
+            }}
+            setPassword={setPassword}
+          />
 
           <SubmitButton
             text="Login"
             clickEvent={() => {
-              submitForm(email, password);
+              submitForm();
             }}
           />
 
