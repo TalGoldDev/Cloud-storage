@@ -1,5 +1,5 @@
 import { Flex, Heading, Img, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import SubmitButton from "../../common/components/SubmitButton/SubmitButton";
 import LoginForm from "./components/LoginForm";
 import SocialLogin from "./components/SocialLogin";
@@ -18,6 +18,11 @@ const Login: React.FC = () => {
   const dispatch = useDispatch();
   const { email } = useSelector(userSelector);
   const { authorized } = useSelector(authSelector);
+
+  useEffect(() => {
+    console.log("I was at login");
+    console.log(email, authorized);
+  }, []);
 
   const submitForm = async () => {
     // if validation passed:
@@ -42,9 +47,7 @@ const Login: React.FC = () => {
     setRedirectRoute("/register");
   };
 
-  return redirect ? (
-    <Redirect to={redirectRoute} />
-  ) : (
+  return (
     <div className="login">
       <Flex
         rounded="2xl"
@@ -78,6 +81,7 @@ const Login: React.FC = () => {
             text="Login"
             clickEvent={() => {
               submitForm();
+              console.log("I was at login");
             }}
           />
 
