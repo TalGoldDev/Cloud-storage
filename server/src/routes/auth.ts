@@ -20,6 +20,7 @@ router.post("/register", async (req: Request, res: Response) => {
   } else {
     console.log("Failed to add user:" + email + " to database");
   }
+
   res.send(result);
 });
 

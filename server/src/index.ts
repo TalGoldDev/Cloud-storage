@@ -28,9 +28,7 @@ app.use(
   })
 );
 
-app.use(loadUserFromSession);
-
-//app.use(express.json());
+app.use(express.json());
 
 app.use(mainRoutes);
 app.use(authRoutes);
