@@ -26,15 +26,12 @@ export const App: React.FC = () => {
         >
           {/* <Header /> */}
           <Switch>
-            <Route path="/register">
-              <Signup />
-            </Route>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="/">
-              <Dashboard />
-            </Route>
+            {/* Dashboard */}
+            <Route path="/" component={Dashboard}></Route>
+
+            {/* Auth */}
+            <Route path="/register" component={Signup}></Route>
+            <Route path="/login" component={Login}></Route>
           </Switch>
         </Flex>
       </Flex>

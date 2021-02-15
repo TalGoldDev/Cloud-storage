@@ -1,5 +1,6 @@
-import { Box, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
 import React from "react";
+import AddFolderButton from "./AddFolderButton";
 
 interface Props {}
 
@@ -179,13 +180,31 @@ const Menu: React.FC<Props> = (props: Props) => {
             </Flex>
           </div>
         </Flex>
-        <Flex
-          marginTop="5vh"
-          display={["none", "none", "none", "block", "block"]}
-          height="auto"
-          width="5vh"
-        >
-          <Text>Logo2</Text>
+        <Flex marginTop="5vh" display="block" height="auto" width="10vw">
+          <Flex
+            marginTop="1vh"
+            width="100%"
+            alignContent="center"
+            alignItems="center"
+          >
+            <AddFolderButton />
+          </Flex>
+          <Flex
+            marginTop="1vh"
+            width="100%"
+            alignContent="center"
+            alignItems="center"
+          >
+            <Button
+              width={["100%", "100%", "100%", "100%", "100%"]}
+              height="4vh"
+              bgColor="blue.400"
+              textColor="white"
+              marginX="auto"
+            >
+              Upload File
+            </Button>
+          </Flex>
         </Flex>
       </Flex>
     </div>
